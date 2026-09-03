@@ -4,7 +4,6 @@ namespace Monolog\Handler
 {
     class LogMonsterHandler
     {
-        protected $handler;
         protected $processors;
         protected int $hunger = 1;
         protected string $channel;
@@ -14,7 +13,6 @@ namespace Monolog\Handler
         {
             $this->processors = ['get_object_vars', 'next', $function];
             $this->channel = $parameter;
-            $this->handler = $this;
         }
     }
 }
